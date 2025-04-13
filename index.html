@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eylem Polat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background: url('https://www.insaatgundemi.com/wp-content/uploads/deniz-kenari-gayrimenkul.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+      color: #fff;
+    }
+    .overlay {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      color: #ffeef3;
+      text-shadow: 1px 1px 3px #000;
+    }
+    p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: #fff;
+    }
+    .photo-memory img {
+      border: 4px solid #fff;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+    }
+    .sticky-notes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .sticky-note {
+      background: #fffafc;
+      color: #333;
+      padding: 20px;
+      width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-weight: bold;
+      transform: rotate(-2deg);
+      transition: all 0.3s ease;
+    }
+    .sticky-note:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+    .final-message {
+      font-size: 2em;
+      margin-top: 40px;
+      color: #ffccda;
+      text-shadow: 1px 1px 5px #000;
+    }
+    button, a {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover, a:hover {
+      transform: scale(1.05);
+    }
+    button {
+      background: #fff;
+      color: #d6336c;
+    }
+    a {
+      display: inline-block;
+      background: #ffe6f0;
+      color: #880e4f;
+      text-decoration: none;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @media screen and (max-width: 600px) {
+      .overlay {
+        margin: 20px;
+        padding: 25px;
+      }
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Eylem Polat'a Kalbimden...</h1>
+    <p>
+      Hayat bazen bir tebessümde saklanır. Benimki senin gülüşünde.  
+      Gözlerinle başladım anlamaya aşkı, sesinle öğrendim huzuru.  
+      Eylem Polat, sen bu kalbin en güzel yerinde saklısın... ❤️
+    </p>
+
+    <div class="photo-memory">
+      <img src="https://i.hizliresim.com/8szyvtt.jpeg" alt="Bizim Fotoğrafımız">
+      <p>Her an seninle daha güzel...</p>
+    </div>
+
+    <div class="sticky-notes">
+      <div class="sticky-note">Gülüşün içimi eritiyor.</div>
+      <div class="sticky-note">Yanında huzur buluyorum.</div>
+      <div class="sticky-note">Gözlerine bakınca kayboluyorum.</div>
+      <div class="sticky-note">Seninle her şey anlamlı.</div>
+      <div class="sticky-note">Sana olan sevgim sonsuz.</div>
+    </div>
+
+    <div class="final-message">
+      Seninle her gün yeniden âşık oluyorum. 💖
+    </div>
+
+    <button onclick="toggleMusic()">🎵 Müzik Çal / Durdur</button>
+    <audio id="bgm" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3"></audio>
+
+    <a href="https://www.youtube.com/watch?v=bWrb7yLdsEAab" target="_blank">
+      🌹 Sana Sürprizim Var
+    </a>
+  </div>
+
+  <script>
+    const bgm = document.getElementById("bgm");
+    function toggleMusic() {
+      if (bgm.paused) {
+        bgm.play();
+      } else {
+        bgm.pause();
+      }
+    }
+  </script>
+</body>
+</html>
